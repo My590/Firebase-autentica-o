@@ -1,19 +1,21 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { sair } from '../services/auth';
 import { auth } from '../../config/firebase';
+import { useRouter } from 'expo-router';
 
-export default function Home({ navigation }) {
+export default function Home() {
+  const router = useRouter();
 
   async function realizarLogout() {
     await sair();
-    navigation.navigate('Login');
+    router.push('/Login');
   }
 
   return (
     <View style={styles.container}>
 
       <Text style={styles.title}>
-        Seja bem-vindo {auth.currentUser?.email}
+       Te recebemos com alegria, {auth.currentUser?.email}
       </Text>
 
       <TouchableOpacity style={styles.button} onPress={realizarLogout}>

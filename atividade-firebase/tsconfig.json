@@ -16,5 +16,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-, "src/app/Cadastro.js", "src/app/Home.js", "src/app/Login.js", "src/services/auth.js"  ]
+, "src/app/index.js", "src/app/Home.js", "src/app/Login.js", "src/services/auth.js"  ]
 }
